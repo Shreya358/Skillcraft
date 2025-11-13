@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: #121212;
+  color: #f5f5f5;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #00ffcc;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #00b3ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0080ff;
+}
+
+.names {
+  margin-top: 10px;
+  display: none;
+}
+
+.names input {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1c1c1c;
+  color: #00ffcc;
+  font-size: 14px;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  display: none;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #1c1c1c;
+  color: #00e0ff;
+  border-radius: 10px;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cell:hover {
+  background: #333333;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #00ffcc;
+  display: none;
+}
+
+#reset {
+  display: none;
+}
+
+.winning {
+  background: #00ffcc !important;
+  color: black !important;
+  animation: flash 0.5s ease-in-out 3;
+}
+
+@keyframes flash {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
